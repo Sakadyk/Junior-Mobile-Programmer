@@ -49,7 +49,7 @@
         <Button
             android:layout_width="@dimen/lebar"
             android:layout_height="@dimen/tinggi"
-            android:text="Kalkulator"
+            android:text="Kalkulator Sederhana"
             android:id="@+id/kalkulator"/>
 
         <Button
