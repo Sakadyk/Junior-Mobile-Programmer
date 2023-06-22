@@ -43,7 +43,7 @@
         <Button
             android:layout_width="@dimen/lebar"
             android:layout_height="@dimen/tinggi"
-            android:text="Nama Roy"
+            android:text="Nama Sakadyk"
             android:id="@+id/nama"/>
 
         <Button
