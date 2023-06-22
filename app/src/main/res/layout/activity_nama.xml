@@ -4,44 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/side_nav_bar"
     android:orientation="vertical"
     tools:context=".NamaActivity">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DATA PESERTA VSGAAAA"
-        android:textSize="40dp"
+        >
+
+        <ImageView
+            android:layout_marginTop="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="400px"
+            android:layout_alignParentLeft="false"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_dts" />
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="50dp"
-        android:textSize="20dp"
-        android:text="Nama : "/>
+        android:background="@drawable/bg"
+        android:orientation="vertical"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="20px"
+        android:layout_marginBottom="20px">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Masukkan Nama Anda"
-        android:id="@+id/editNama"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="DATA PESERTA VSGA"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@color/putih"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:layout_marginTop="40px"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OK"
-        android:id="@+id/btnOk"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Data Peserta"
-        android:id="@+id/txtHasil"
-        android:paddingBottom="80dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20px"
+            android:paddingTop="20dp"
+            android:text="Nama : "
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@color/putih"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/editNama"
+            android:layout_width="379dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/hitam"
+            android:backgroundTintMode="screen"
+            android:hint="Masukkan Nama Anda"
+            android:textColor="@color/putih"
+            android:textSize="15dp" />
+
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="382dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="28px"
+            android:text="OK"
+            android:background="@drawable/drawable2_button"
+            />
+
+
+        <TextView
+            android:id="@+id/txtHasil"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30px"
+            android:paddingBottom="80dp"
+            android:text="Data Peserta"
+            android:textSize="20dp"
+            android:textColor="@color/putih"/>
+    </LinearLayout>
 
 </LinearLayout>
