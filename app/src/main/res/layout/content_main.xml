@@ -43,19 +43,19 @@
         <Button
             android:layout_width="@dimen/lebar"
             android:layout_height="@dimen/tinggi"
-            android:text="Nama Saya Roy"
+            android:text="Nama"
             android:id="@+id/nama"/>
 
         <Button
             android:layout_width="@dimen/lebar"
             android:layout_height="@dimen/tinggi"
-            android:text="Kalkulator Sederhana"
+            android:text="Kalkulator"
             android:id="@+id/kalkulator"/>
 
         <Button
             android:layout_width="@dimen/lebar"
             android:layout_height="@dimen/tinggi"
-            android:text="Lingkaran Kecil"
+            android:text="Lingkaran"
             android:id="@+id/lingkaran"/>
     </LinearLayout>
         <LinearLayout
