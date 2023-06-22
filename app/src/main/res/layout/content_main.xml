@@ -73,7 +73,7 @@
             <Button
                 android:layout_width="@dimen/lebar"
                 android:layout_height="@dimen/tinggi"
-                android:text="Login"
+                android:text="LoginKontol"
                 android:id="@+id/login"/>
 
             <Button
