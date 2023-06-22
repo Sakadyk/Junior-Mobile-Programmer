@@ -55,7 +55,7 @@
         <Button
             android:layout_width="@dimen/lebar"
             android:layout_height="@dimen/tinggi"
-            android:text="Lingkaran"
+            android:text="Lingkaran Kecil"
             android:id="@+id/lingkaran"/>
     </LinearLayout>
         <LinearLayout
