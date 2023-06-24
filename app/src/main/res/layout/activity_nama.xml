@@ -75,16 +75,15 @@
             android:textSize="15dp" />
 
 
+
+
+
         <Button
             android:id="@+id/btnOk"
-            android:layout_width="382dp"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="28px"
-            android:text="OK"
-            android:background="@drawable/drawable2_button"
-            />
-
+            android:text="OK" />
 
         <TextView
             android:id="@+id/txtHasil"

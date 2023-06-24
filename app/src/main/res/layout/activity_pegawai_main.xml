@@ -11,7 +11,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama Pegawai" />
+        android:text="Nama Pegawai"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#292929"
+        android:textStyle="bold"/>
+
 
     <EditText
         android:layout_width="match_parent"
@@ -21,7 +25,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Posisi" />
+        android:text="Posisi"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#292929"
+        android:textStyle="bold"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -31,7 +38,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gaji" />
+        android:text="Gaji"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#292929"
+        android:textStyle="bold"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -39,14 +49,17 @@
         android:id="@+id/editTextSalary" />
 
     <Button
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tambah Pegawai"
-        android:id="@+id/buttonAdd" />
+        android:id="@+id/buttonAdd"
+        android:backgroundTint="#292929"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Daftar Pegawai"
-        android:id="@+id/buttonView" />
+        android:id="@+id/buttonView"
+        android:backgroundTint="#292929"/>
 
 </LinearLayout>
