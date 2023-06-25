@@ -5,36 +5,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@android:color/white"
     tools:context=".LingkaranActivity">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="30dp"
-        android:text="Luas dan Keliling Lingkaran"/>
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/hmm" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="40dp"
-        android:text="Masukkan Jari-Jari Lingkaran" />
+        android:text="Luas dan Keliling Lingkaran"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masukkan Jari-Jari Lingkaran"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="40dp" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="295dp"
         android:layout_height="wrap_content"
         android:hint="Input Jari-Jari"
-        android:id="@+id/jari2"/>
+        android:id="@+id/jari2"
+        android:inputType="numberDecimal"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="HITUNG"
-        android:id="@+id/hitung"/>
+        android:id="@+id/hitung"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_background"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:layout_marginTop="16dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Luas dan Keliling"
-        android:id="@+id/nilai"/>
+        android:id="@+id/nilai"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="40dp" />
 
 </LinearLayout>

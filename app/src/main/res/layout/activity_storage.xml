@@ -5,26 +5,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
     tools:context=".StorageActivity">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/storage" />
 
     <EditText
         android:id="@+id/input_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
         android:hint="Masukan Data"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:imeOptions="actionDone"
+        android:singleLine="true" />
 
     <Button
         android:id="@+id/save_internal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Simpan ke Internal" />
+        android:layout_marginTop="16dp"
+        android:text="Simpan ke Internal"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:background="@drawable/button_background" />
 
     <Button
         android:id="@+id/save_external"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Simpan ke External" />
+        android:layout_marginTop="16dp"
+        android:text="Simpan ke External"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:background="@drawable/button_background" />
 
 </LinearLayout>
