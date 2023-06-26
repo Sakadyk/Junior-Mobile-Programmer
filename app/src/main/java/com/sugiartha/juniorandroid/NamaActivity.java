@@ -14,6 +14,8 @@ public class NamaActivity extends AppCompatActivity {
     EditText editNama;
     TextView txtHasil;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
