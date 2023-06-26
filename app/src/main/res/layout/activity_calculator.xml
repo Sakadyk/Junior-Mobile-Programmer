@@ -5,7 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CalculatorActivity">
+    tools:context=".CalculatorActivity"
+    tools:ignore="ExtraText">
+
 
     <Button
         android:text="+"
@@ -43,7 +45,7 @@
         android:textSize="14sp" />
 
     <TextView
-        android:text="Insert two Numbers"
+        android:text="Insert Two Numbers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView5"
@@ -52,7 +54,14 @@
         android:textSize="24sp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:background="@drawable/gradient_background"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        />
+
+
+
 
     <TextView
         android:text="0"
