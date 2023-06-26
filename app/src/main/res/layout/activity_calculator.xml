@@ -88,7 +88,7 @@
         android:layout_toEndOf="@+id/tambah" />
 
     <Button
-        android:text="BERSIHKAN"
+        android:text="Reset"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bersihkan"
