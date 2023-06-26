@@ -43,7 +43,7 @@
         android:textSize="14sp" />
 
     <TextView
-        android:text="MASUKKAN DUA ANGKA"
+        android:text="Insert two Numbers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView5"
