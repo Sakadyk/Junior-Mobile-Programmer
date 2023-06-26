@@ -109,6 +109,7 @@ public class CalculatorActivity extends AppCompatActivity {
                 hasil.setText("0");
                 angka_pertama.requestFocus();
             }
-        });
+        }
+        );
     }
 }

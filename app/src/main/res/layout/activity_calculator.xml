@@ -17,7 +17,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="18dp"
-        android:layout_width="80dp" />
+        android:layout_width="80dp"
+        android:textSize="24sp"
+        />
 
     <EditText
         android:layout_width="match_parent"
@@ -87,14 +89,15 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="-"
-        android:layout_height="wrap_content"
         android:id="@+id/kurang"
-        android:layout_width="80dp"
+        android:layout_width="76dp"
+        android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/tambah"
         android:layout_alignBottom="@+id/tambah"
+        android:layout_toEndOf="@+id/tambah"
         android:layout_toRightOf="@+id/tambah"
-        android:layout_toEndOf="@+id/tambah" />
+        android:text="-"
+        android:textSize="24sp" />
 
     <Button
         android:text="Reset"
@@ -102,7 +105,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/bersihkan"
         android:layout_below="@+id/tambah"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        />
 
     <Button
         android:text="/"
@@ -111,7 +115,8 @@
         android:layout_width="80dp"
         android:layout_above="@+id/bersihkan"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textSize="24sp"/>
 
     <Button
         android:text="X"
@@ -121,6 +126,8 @@
         android:layout_alignBaseline="@+id/bagi"
         android:layout_alignBottom="@+id/bagi"
         android:layout_toLeftOf="@+id/bagi"
-        android:layout_toStartOf="@+id/bagi" />
+        android:layout_toStartOf="@+id/bagi"
+        android:textSize="19sp"
+        />
 
 </RelativeLayout>
