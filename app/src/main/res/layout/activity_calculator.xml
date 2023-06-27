@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CalculatorActivity"
+    android:background="@drawable/bg4"
     tools:ignore="ExtraText"
 
     >
