@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
-    android:background="@drawable/bg"
+    android:background="@drawable/land"
     tools:showIn="@layout/app_bar_main">
 
     <com.synnapps.carouselview.CarouselView
@@ -14,9 +14,9 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="-30dp"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="180dp"
         app:fillColor="#FFFFFFFF"
         app:pageColor="#00000000"
         app:radius="6dp"
@@ -40,46 +40,53 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:layout_width="@dimen/lebar"
             android:layout_height="@dimen/tinggi"
-            android:text="Nama"
+            android:background="@drawable/radius_content"
+            android:src="@drawable/nama1"
             android:id="@+id/nama"/>
 
-        <Button
+        <ImageButton
             android:layout_width="@dimen/lebar"
             android:layout_height="@dimen/tinggi"
-            android:text="Kalkulator"
+            android:background="@drawable/radius_content"
+            android:src="@drawable/kalkulator"
             android:id="@+id/kalkulator"/>
 
-        <Button
+        <ImageButton
             android:layout_width="@dimen/lebar"
             android:layout_height="@dimen/tinggi"
-            android:text="Lingkaran"
+            android:background="@drawable/radius_content"
+            android:src="@drawable/lingkaran"
             android:id="@+id/lingkaran"/>
     </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
+            <ImageButton
                 android:layout_width="@dimen/lebar"
+                android:background="@drawable/radius_content"
                 android:layout_height="@dimen/tinggi"
-                android:text="Bilangan"
+                android:src="@drawable/bilangan"
                 android:id="@+id/bilangan"/>
 
-            <Button
+            <ImageButton
                 android:layout_width="@dimen/lebar"
+                android:background="@drawable/radius_content"
                 android:layout_height="@dimen/tinggi"
-                android:text="Login"
+                android:src="@drawable/login"
                 android:id="@+id/login"/>
 
-            <Button
+            <ImageButton
                 android:layout_width="@dimen/lebar"
+                android:background="@drawable/radius_content"
                 android:layout_height="@dimen/tinggi"
-                android:text="Sign Up"
+                android:src="@drawable/signup"
                 android:id="@+id/signup"/>
 
         </LinearLayout>
@@ -87,25 +94,30 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
+            <ImageButton
                 android:layout_width="@dimen/lebar"
                 android:layout_height="@dimen/tinggi"
                 android:text="Calculator"
+                android:background="@drawable/radius_content"
+                android:src="@drawable/kalkulator"
                 android:id="@+id/calculator"/>
 
-            <Button
+            <ImageButton
                 android:layout_width="@dimen/lebar"
                 android:layout_height="@dimen/tinggi"
-                android:text="BMI"
+                android:background="@drawable/radius_content"
+                android:src="@drawable/bmi"
                 android:id="@+id/bmi"/>
 
-            <Button
+            <ImageButton
                 android:layout_width="@dimen/lebar"
                 android:layout_height="@dimen/tinggi"
-                android:text="List View"
+                android:background="@drawable/radius_content"
+                android:src="@drawable/listview"
                 android:id="@+id/listview"/>
 
         </LinearLayout>
@@ -113,25 +125,29 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
+            <ImageButton
                 android:layout_width="@dimen/lebar"
                 android:layout_height="@dimen/tinggi"
-                android:text="Catatan"
+                android:background="@drawable/radius_content"
+                android:src="@drawable/catatan"
                 android:id="@+id/catatan"/>
 
-            <Button
+            <ImageButton
                 android:layout_width="@dimen/lebar"
                 android:layout_height="@dimen/tinggi"
-                android:text="File"
+                android:background="@drawable/radius_content"
+                android:src="@drawable/file"
                 android:id="@+id/internalexternal"/>
 
-            <Button
+            <ImageButton
                 android:layout_width="@dimen/lebar"
                 android:layout_height="@dimen/tinggi"
-                android:text="Storage"
+                android:background="@drawable/radius_content"
+                android:src="@drawable/storage"
                 android:id="@+id/storage"/>
 
         </LinearLayout>
@@ -140,24 +156,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
-            <Button
+            <ImageButton
                 android:layout_width="@dimen/lebar"
                 android:layout_height="@dimen/tinggi"
-                android:text="List"
+                android:background="@drawable/radius_content"
+                android:src="@drawable/list"
                 android:id="@+id/list"/>
 
-            <Button
+            <ImageButton
                 android:layout_width="@dimen/lebar"
                 android:layout_height="@dimen/tinggi"
-                android:text="SQLite"
+                android:background="@drawable/radius_content"
+                android:src="@drawable/sqlite"
                 android:id="@+id/sqlite"/>
 
-            <Button
+            <ImageButton
                 android:layout_width="@dimen/lebar"
                 android:layout_height="@dimen/tinggi"
-                android:text="MySQL"
+                android:background="@drawable/radius_content"
+                android:src="@drawable/mysql"
                 android:id="@+id/mysql"/>
 
         </LinearLayout>
@@ -165,25 +185,29 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
+            <ImageButton
                 android:layout_width="@dimen/lebar"
                 android:layout_height="@dimen/tinggi"
-                android:text="CEK GPS"
+                android:background="@drawable/radius_content"
+                android:src="@drawable/gps"
                 android:id="@+id/gps"/>
 
-            <Button
+            <ImageButton
                 android:layout_width="@dimen/lebar"
                 android:layout_height="@dimen/tinggi"
-                android:text="Seluler"
+                android:background="@drawable/radius_content"
+                android:src="@drawable/selular"
                 android:id="@+id/seluler"/>
 
-            <Button
+            <ImageButton
                 android:layout_width="@dimen/lebar"
                 android:layout_height="@dimen/tinggi"
-                android:text="Sensor"
+                android:background="@drawable/radius_content"
+                android:src="@drawable/sensor"
                 android:id="@+id/sensor"/>
 
         </LinearLayout>

@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FCFFD1"
     tools:context=".AddEditActivity">
 
     <EditText
@@ -19,14 +20,29 @@
         android:id="@+id/txt_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:hint="Input Nama"/>
 
     <EditText
         android:id="@+id/txt_address"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Input Alamattetetetet"/>
+        android:hint="Input Alamat"/>
+
+    <EditText
+        android:id="@+id/txt_umur"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Input Umur"/>
+
+    <EditText
+        android:id="@+id/txt_hoby"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Input Hoby"/>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -39,6 +55,7 @@
             android:layout_weight="0.5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
             android:text="Submit"/>
 
         <Button
@@ -46,6 +63,7 @@
             android:layout_weight="0.5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner2"
             android:text="Cancel"/>
 
     </LinearLayout>
