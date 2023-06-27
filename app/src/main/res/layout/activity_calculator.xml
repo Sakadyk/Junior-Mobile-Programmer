@@ -6,7 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CalculatorActivity"
+    android:background="@drawable/background_calculator"
     tools:ignore="ExtraText"
+
     >
 
 
@@ -63,8 +65,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="@drawable/gradient_background"
-        android:textColor="#FFFFFF"
         android:padding="16dp"
+        android:textColor="#000000"
         />
 
 
@@ -94,7 +96,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="@drawable/gradient_background"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:padding="1dp"/>
 
     <Button
@@ -107,6 +109,8 @@
         android:layout_toRightOf="@+id/tambah"
         android:text="-"
         android:textSize="24sp"
+        android:textColor="#000000"
+        android:background="@drawable/gradient_background"
         />
 
     <Button
@@ -116,6 +120,8 @@
         android:id="@+id/bersihkan"
         android:layout_below="@+id/tambah"
         android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:background="@drawable/gradient_background"
         />
 
     <Button
@@ -140,6 +146,7 @@
         android:layout_toLeftOf="@+id/bagi"
         android:layout_toStartOf="@+id/bagi"
         android:textSize="15sp"
+        android:background="@drawable/gradient_background"
 
         />
 
