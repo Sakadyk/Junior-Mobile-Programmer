@@ -22,20 +22,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Luas dan Keliling Lingkaran"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@android:color/black" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Masukkan Jari-Jari Lingkaran"
+        android:text="Masukkan Jari-jari Lingkaran"
         android:textSize="18sp"
         android:textColor="@android:color/black"
         android:layout_marginTop="40dp" />
 
     <EditText
-        android:layout_width="295dp"
+        android:layout_width="235dp"
         android:layout_height="wrap_content"
         android:hint="Input Jari-Jari"
         android:id="@+id/jari2"
@@ -47,7 +47,7 @@
         android:layout_marginTop="8dp" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="235dp"
         android:layout_height="wrap_content"
         android:text="HITUNG"
         android:id="@+id/hitung"
@@ -59,14 +59,49 @@
         android:paddingEnd="24dp"
         android:layout_marginTop="16dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <GridLayout
+        android:layout_width="235dp"
         android:layout_height="wrap_content"
-        android:text="Luas dan Keliling"
-        android:id="@+id/nilai"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"
-        android:layout_marginTop="40dp" />
+        android:columnCount="2"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luas:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:id="@+id/nilaiLuas"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="right"
+            android:textSize="18sp"
+            android:background="@drawable/edittext_background"/>
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="235dp"
+        android:layout_height="25dp"
+        android:columnCount="2"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keliling:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:id="@+id/nilaiKel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_gravity="right"
+            android:textSize="18sp"
+            android:background="@drawable/edittext_background"/>
+    </GridLayout>
+
 
 </LinearLayout>

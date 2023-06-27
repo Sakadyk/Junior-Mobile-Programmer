@@ -8,11 +8,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class LingkaranActivity extends AppCompatActivity {
+import java.text.DecimalFormat;
 
+public class LingkaranActivity extends AppCompatActivity {
     Button hitung;
     EditText jari2;
-    TextView nilai;
+    TextView nilaiLuas, nilaiKel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,8 @@ public class LingkaranActivity extends AppCompatActivity {
 
         hitung = (Button) findViewById(R.id.hitung);
         jari2 = (EditText) findViewById(R.id.jari2);
-        nilai = (TextView) findViewById(R.id.nilai);
+        nilaiLuas = (TextView) findViewById(R.id.nilaiLuas);
+        nilaiKel = (TextView) findViewById(R.id.nilaiKel);
 
         hitung.setOnClickListener(new Button.OnClickListener() {
             @Override public void onClick(View v) {
@@ -29,7 +31,10 @@ public class LingkaranActivity extends AppCompatActivity {
                 double phi = 3.14;
                 double luas = phi*jari*jari;
                 double keliling = 2*phi*jari;
-                nilai.setText("Luas Lingkaran : " + Double.toString(luas) + "\nKeliling Lingkaran : " + Double.toString(keliling) + "");
-            }});
+                nilaiLuas.setText(" " + Double.toString(luas));
+                nilaiKel.setText(" " + Double.toString(keliling));
+            }
+        });
+
     }
 }

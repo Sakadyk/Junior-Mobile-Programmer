@@ -3,6 +3,7 @@ package com.sugiartha.juniorandroid;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -10,11 +11,12 @@ import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileOutputStream;
+import java.io.FileInputStream;
 import java.io.FileReader;
-import java.io.IOException;
+import java.io.FileWriter;
+import java.io.InputStreamReader;
 
-public class InternalExternalActivity extends AppCompatActivity implements View.OnClickListener{
+public class InternalExternalActivity extends AppCompatActivity {
 
     public static final String FILENAME = "dts2022.txt";
     TextView textBaca;
@@ -24,110 +26,109 @@ public class InternalExternalActivity extends AppCompatActivity implements View.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_internal_external);
 
-        Button buatFile = findViewById(R.id.btnBuatFile);
-        Button ubahFile = findViewById(R.id.btnUbahFile);
-        Button bacaFile = findViewById(R.id.btnBacaFile);
-        Button deleteFile = findViewById(R.id.btnHapusFile);
+        Button save = findViewById(R.id.btnSave);
+        Button read = findViewById(R.id.btnRead);
+        Button delete = findViewById(R.id.btnDelete);
+        Button clear = findViewById(R.id.btnClear);
         textBaca = findViewById(R.id.textBaca);
 
-        buatFile.setOnClickListener(this);
-        ubahFile.setOnClickListener(this);
-        bacaFile.setOnClickListener(this);
-        deleteFile.setOnClickListener(this);
-    }
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String setData = textBaca.getText().toString();
 
-    void buatFile(){
-        String isiFile = "Jadilah Jagoan Digital";
-        File file = new File(getFilesDir(), FILENAME);
-
-        FileOutputStream outputStream = null;
-
-        try {
-            file.createNewFile();
-            outputStream = new FileOutputStream(file, true);
-            outputStream.write(isiFile.getBytes());
-            outputStream.flush();
-            outputStream.close();
-
-            Toast.makeText(this, getFilesDir().toString(), Toast.LENGTH_LONG).show();
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    void ubahFile(){
-        String ubah = "Semangat Berjuang Peserta DTS";
-        File file = new File(getFilesDir(), FILENAME);
-
-        FileOutputStream outputStream = null;
-
-        try {
-            file.createNewFile();
-            outputStream = new FileOutputStream(file, false);
-            outputStream.write(ubah.getBytes());
-            outputStream.flush();
-            outputStream.close();
-
-            Toast.makeText(this, "file berhasil diubah", Toast.LENGTH_LONG).show();
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    void bacaFile(){
-        File sdcard = getFilesDir();
-        File file = new File(sdcard, FILENAME);
-
-        if(file.exists()){
-            StringBuilder text = new StringBuilder();
-
-            try {
-                BufferedReader br = new BufferedReader(new FileReader(file));
-                String line = br.readLine();
-
-                while (line != null){
-                    text.append(line);
-                    line = br.readLine();
+                try {
+                    // Get the path to the Documents folder
+                    File documentsFolder = null;
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+                        documentsFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
+                    }
+                    // Create the Documents directory if it doesn't exist
+                    if (!documentsFolder.exists()) {
+                        documentsFolder.mkdirs();
+                    }
+                    // Create a new file in the Documents folder
+                    File file = new File(documentsFolder, "File.txt");
+                    // Create a FileWriter to write data to the file
+                    FileWriter fileWriter = new FileWriter(file);
+                    // Write the data to the file
+                    fileWriter.write(setData);
+                    // Close the FileWriter
+                    fileWriter.close();
+                    Toast.makeText(getApplicationContext(), "File disimpan di Documents", Toast.LENGTH_SHORT).show();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
                 }
-                br.close();
-                Toast.makeText(this, "Membaca File", Toast.LENGTH_SHORT).show();
             }
-            catch (IOException e){
-                System.out.println("Error "+e.getMessage());
+        });
+
+        read.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    // Get the path to the Documents folder
+                    File documentsFolder = null;
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+                        documentsFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
+                    }
+                    // Create a new file object for "File.txt"
+                    File file = new File(documentsFolder, "File.txt");
+                    // Create a FileReader to read the contents of the file
+                    FileReader fileReader = new FileReader(file);
+                    // Create a BufferedReader to read text from the FileReader
+                    BufferedReader bufferedReader = new BufferedReader(fileReader);
+                    // Read the text from the file
+                    StringBuilder stringBuilder = new StringBuilder();
+                    String line;
+                    while ((line = bufferedReader.readLine()) != null) {
+                        stringBuilder.append(line);
+                        stringBuilder.append("\n");
+                    }
+                    // Close the FileReader and BufferedReader
+                    bufferedReader.close();
+                    fileReader.close();
+                    // Set the read text to the textBaca EditText
+                    textBaca.setText(stringBuilder.toString());
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             }
-            textBaca.setText(text.toString());
-        }
-    }
+        });
 
-    void hapusFile(){
-        File file = new File(getFilesDir(), FILENAME);
-        if(file.exists()){
-            file.delete();
-            Toast.makeText(this, "File Sudah Terhapus", Toast.LENGTH_SHORT).show();
-        }
-    }
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    // Mendapatkan path ke folder Documents
+                    File documentsFolder = null;
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+                        documentsFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
+                    }
+                    // Mendapatkan path file yang ingin dihapus
+                    File file = new File(documentsFolder, "File.txt");
+                    // Menghapus file jika ada
+                    if (file.exists()) {
+                        if (file.delete()) {
+                            Toast.makeText(getApplicationContext(), "File berhasil dihapus", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Gagal menghapus file", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "File tidak ditemukan", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
 
-    public void jalanPerintah(int id){
-        switch (id){
-            case  R.id.btnBuatFile:
-                buatFile();
-                break;
-            case R.id.btnUbahFile:
-                ubahFile();
-                break;
-            case R.id.btnBacaFile:
-                bacaFile();
-                break;
-            case R.id.btnHapusFile:
-                hapusFile();
-                break;
-        }
-    }
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Clear the content of textBaca
+                textBaca.setText("");
+            }
+        });
 
-    @Override
-    public void onClick(View view) {
-        jalanPerintah(view.getId());
     }
 }
