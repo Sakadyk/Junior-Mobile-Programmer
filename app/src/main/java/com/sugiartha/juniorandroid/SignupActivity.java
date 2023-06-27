@@ -57,8 +57,6 @@ public class SignupActivity extends AppCompatActivity {
                     // Konfirmasi password tidak cocok, tampilkan pesan kesalahan
                     Toast.makeText(SignupActivity.this, "Konfirmasi password tidak cocok", Toast.LENGTH_SHORT).show();
                 } else {
-                    // Lanjutkan dengan proses pendaftaran
-                    // ...
                 }
             }
         });
