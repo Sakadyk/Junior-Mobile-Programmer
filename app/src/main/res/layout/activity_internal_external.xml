@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
         android:gravity="start|top"
-        android:hint="Di sini tempat file ya masbro"
+        android:hint="Di sini tempat file-nya masbro"
         android:inputType="textMultiLine"
         android:textColor="@android:color/black"
         android:textSize="16sp"
