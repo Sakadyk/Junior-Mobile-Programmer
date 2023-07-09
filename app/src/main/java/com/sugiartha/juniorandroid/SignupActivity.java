@@ -2,6 +2,7 @@ package com.sugiartha.juniorandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class SignupActivity extends AppCompatActivity {
@@ -57,7 +59,21 @@ public class SignupActivity extends AppCompatActivity {
                     // Konfirmasi password tidak cocok, tampilkan pesan kesalahan
                     Toast.makeText(SignupActivity.this, "Konfirmasi password tidak cocok", Toast.LENGTH_SHORT).show();
                 } else {
+                    // Semua validasi berhasil, pindahkan ke LoginActivity
+                    Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
+            }
+        });
+        TextView linkSign = findViewById(R.id.linksign);
+        linkSign.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Pindah ke LoginActivity
+                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

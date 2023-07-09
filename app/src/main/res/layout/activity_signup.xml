@@ -18,9 +18,9 @@ tools:context=".SignupActivity">
 
 
     <LinearLayout
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_width="350dp"
-        android:layout_height="400dp"
+        android:layout_height="450dp"
         android:orientation="vertical"
         android:background="@drawable/radius">
 
@@ -95,6 +95,34 @@ tools:context=".SignupActivity">
             android:id="@+id/signUpButton"
             android:text="SIGN UP"
             android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="9dp"
+                android:paddingTop="20dp"
+                android:autoLink="web"
+                android:text="Sudah punya akun? "
+                android:textColor="#D8FFF4"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:paddingTop="20dp"
+                android:id="@+id/linksign"
+                android:text="Login sekarang"
+                android:textColor="#bbf26d"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
 
 
     </LinearLayout>
