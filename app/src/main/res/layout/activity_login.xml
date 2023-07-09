@@ -39,6 +39,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/usernya"
             android:hint="Username kamu"
             android:textAllCaps="true"
             android:textColorHighlight="@color/hijautoska"
@@ -62,6 +63,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/passnya"
             android:hint="Password kamu" />
 
 
@@ -73,7 +75,7 @@
             android:layout_height="wrap_content"
             android:text="LOGIN"
             android:background="@drawable/rounded_corner"
-            android:id="@+id/signupini"/>
+            android:id="@+id/loginnya"/>
 
 
 
