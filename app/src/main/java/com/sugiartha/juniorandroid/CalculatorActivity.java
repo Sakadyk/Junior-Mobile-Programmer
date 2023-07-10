@@ -13,7 +13,7 @@ public class CalculatorActivity extends AppCompatActivity {
 
     //Deklarasi variable
     EditText angka_pertama, angka_kedua;
-    Button tambah, kurang, kali, bagi, bersihkan;
+    Button tambah, kurang, kali, bagi, bersihkan,modulo;
     TextView hasil;
 
     @Override
@@ -25,6 +25,7 @@ public class CalculatorActivity extends AppCompatActivity {
 
         angka_pertama = (EditText) findViewById(R.id.angka_pertama);
         angka_kedua = (EditText) findViewById(R.id.angka_kedua);
+        modulo = (Button)findViewById(R.id.modulo);
         tambah = (Button)findViewById(R.id.tambah);
         kurang = (Button)findViewById(R.id.kurang);
         kali = (Button)findViewById(R.id.kali);
@@ -74,7 +75,7 @@ public class CalculatorActivity extends AppCompatActivity {
                 {
                     double angka1 = Double.parseDouble(angka_pertama.getText().toString());
                     double angka2 = Double.parseDouble(angka_kedua.getText().toString());
-                    double result = angka1 * angka2;
+                    double result = angka1 % angka2;
                     hasil.setText(Double.toString(result));
                 }
                 else {
@@ -101,6 +102,23 @@ public class CalculatorActivity extends AppCompatActivity {
             }
         });
 
+        modulo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if((angka_pertama.getText().length()>0) && (angka_kedua.getText().length()>0))
+                {
+                    double angka1 = Double.parseDouble(angka_pertama.getText().toString());
+                    double angka2 = Double.parseDouble(angka_kedua.getText().toString());
+                    double result = angka1 % angka2;
+                    hasil.setText(Double.toString(result));
+                }
+                else {
+                    Toast toast = Toast.makeText(CalculatorActivity.this, "Mohon masukkan Angka pertama & Kedua", Toast.LENGTH_LONG);
+                    toast.show();
+                }
+            }
+        });
+
         bersihkan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,6 +127,7 @@ public class CalculatorActivity extends AppCompatActivity {
                 hasil.setText("0");
                 angka_pertama.requestFocus();
             }
-        });
+        }
+        );
     }
 }
