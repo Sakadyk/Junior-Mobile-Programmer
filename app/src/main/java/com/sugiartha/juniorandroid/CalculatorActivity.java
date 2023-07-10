@@ -75,7 +75,7 @@ public class CalculatorActivity extends AppCompatActivity {
                 {
                     double angka1 = Double.parseDouble(angka_pertama.getText().toString());
                     double angka2 = Double.parseDouble(angka_kedua.getText().toString());
-                    double result = angka1 % angka2;
+                    double result = angka1 * angka2;
                     hasil.setText(Double.toString(result));
                 }
                 else {

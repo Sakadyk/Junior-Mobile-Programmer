@@ -147,7 +147,7 @@
                 android:layout_width="@dimen/lebar"
                 android:layout_height="@dimen/tinggi"
                 android:background="@drawable/radius_content"
-                android:src="@drawable/storage"
+                android:src="@drawable/storage2"
                 android:id="@+id/storage"/>
 
         </LinearLayout>
