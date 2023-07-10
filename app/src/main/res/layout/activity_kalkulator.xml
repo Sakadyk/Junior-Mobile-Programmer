@@ -5,35 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".KalkulatorActivity">
+    tools:context=".KalkulatorActivity"
+    android:background="@drawable/bg4">
+    <TextView
+        android:text="KALKULATOR PERTAMBAHAN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/gradient_background"
+        android:padding="16dp"
+        android:textColor="#000000"
+        />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Input Angka Pertama"/>
+        android:text="Input Angka Pertama"
+        android:textColor="#000000"
+        android:textStyle="normal|bold"
+        />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:id="@+id/angka1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Angka Pertama"
-        android:id="@+id/angka1"/>
+        android:hint="Angka Pertama" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="423dp"
         android:layout_height="wrap_content"
-        android:text="Input Angka Kedua"/>
+        android:text="Input Angka Kedua"
+        android:textStyle="normal|bold"
+        android:textColor="#000000"/>
 
     <EditText
-        android:layout_width="wrap_content"
+        android:id="@+id/angka2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Angka Kedua"
-        android:id="@+id/angka2"/>
+        android:hint="Angka Kedua" />
 
     <Button
+        android:id="@+id/btnHitung"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+"
-        android:id="@+id/btnHitung"/>
+        android:text="+" />
 
     <TextView
         android:layout_width="wrap_content"
