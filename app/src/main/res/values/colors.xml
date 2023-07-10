@@ -9,6 +9,9 @@
     <color name="coklat">#c49b60</color>
     <color name="putih">#FFFFFF</color>
 
+    <color name="connected_background">#008000</color>
+    <color name="disconnected_background">#FF0000</color>
+
     <color name="darker_gray">#A9A9A9</color>
     <color name="gray">#808080</color>
     <color name="card_bg">#B8B8B8</color>
