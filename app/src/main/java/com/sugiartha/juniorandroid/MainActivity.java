@@ -24,12 +24,13 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    Button btnNama, btnKalkulator, btnLingkaran, btnBilangan, btnLogin, btnSignup, btnCalculator, btnBMI, btnListview, btnList, btnSqlite, btnMysql, btngps, btnseluler, btnsensor, btncatatan, btninternalexternal, btnstorage;
+    ImageButton btnNama, btnKalkulator, btnLingkaran, btnBilangan, btnLogin, btnSignup, btnCalculator, btnBMI, btnListview, btnList, btnSqlite, btnMysql, btngps, btnseluler, btnsensor, btncatatan, btninternalexternal, btnstorage;
 
     CarouselView carouselView;
     int[] sampleImages = {R.drawable.gambar_1, R.drawable.gambar_2, R.drawable.gambar_3};
@@ -45,21 +46,21 @@ public class MainActivity extends AppCompatActivity
         carouselView.setPageCount(sampleImages.length);
         carouselView.setImageListener(imageListener);
 
-        btnNama = (Button) findViewById(R.id.nama);
-        btnKalkulator = (Button) findViewById(R.id.kalkulator);
-        btnLingkaran = (Button) findViewById(R.id.lingkaran);
-        btnBilangan = (Button) findViewById(R.id.bilangan);
-        btnLogin = (Button) findViewById(R.id.login);
-        btnSignup = (Button) findViewById(R.id.signup);
-        btnCalculator = (Button) findViewById(R.id.calculator);
-        btnBMI = (Button) findViewById(R.id.bmi);
-        btnListview = (Button) findViewById(R.id.listview);
-        btnList = (Button) findViewById(R.id.list);
-        btnSqlite = (Button) findViewById(R.id.sqlite);
-        btnMysql = (Button) findViewById(R.id.mysql);
-        btngps = (Button) findViewById(R.id.gps);
-        btnseluler = (Button) findViewById(R.id.seluler);
-        btnsensor = (Button) findViewById(R.id.sensor);
+        btnNama = (ImageButton) findViewById(R.id.nama);
+        btnKalkulator = (ImageButton) findViewById(R.id.kalkulator);
+        btnLingkaran = (ImageButton) findViewById(R.id.lingkaran);
+        btnBilangan = (ImageButton) findViewById(R.id.bilangan);
+        btnLogin = (ImageButton) findViewById(R.id.login);
+        btnSignup = (ImageButton) findViewById(R.id.signup);
+        btnCalculator = (ImageButton) findViewById(R.id.calculator);
+        btnBMI = (ImageButton) findViewById(R.id.bmi);
+        btnListview = (ImageButton) findViewById(R.id.listview);
+        btnList = (ImageButton) findViewById(R.id.list);
+        btnSqlite = (ImageButton) findViewById(R.id.sqlite);
+        btnMysql = (ImageButton) findViewById(R.id.mysql);
+        btngps = (ImageButton) findViewById(R.id.gps);
+        btnseluler = (ImageButton) findViewById(R.id.seluler);
+        btnsensor = (ImageButton) findViewById(R.id.sensor);
         btncatatan = findViewById(R.id.catatan);
         btninternalexternal = findViewById(R.id.internalexternal);
         btnstorage = findViewById(R.id.storage);
