@@ -5,21 +5,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListActivity">
+    tools:context=".ListActivity"
+    android:background="@drawable/bg">
 
-    <ListView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="17dp"
-        android:id="@+id/list_view" />
+        android:fillViewport="true">
 
-    <TextView
-        android:text="Pilih Nama Negara :"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp"
-        android:layout_alignParentTop="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                app:cardBackgroundColor="@color/card_bg"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:text="Pilih Nama Negara :"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView"
+                    android:padding="8dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:id="@+id/list_view"
+                android:clipToPadding="false"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
+
