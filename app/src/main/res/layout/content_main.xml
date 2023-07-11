@@ -11,9 +11,6 @@
 
     <com.synnapps.carouselview.CarouselView
         android:id="@+id/carouselView"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
         android:layout_marginBottom="-30dp"
         android:layout_width="match_parent"
         android:layout_height="180dp"
@@ -25,7 +22,7 @@
         app:strokeWidth="1dp"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="50dp"
@@ -35,87 +32,99 @@
         android:layout_below="@+id/carouselView">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal">
 
         <ImageButton
-            android:layout_width="@dimen/lebar"
+            android:layout_width="0dp"
             android:layout_height="@dimen/tinggi"
+            android:layout_weight="1"
             android:background="@drawable/radius_content"
             android:src="@drawable/nama1"
             android:id="@+id/nama"/>
 
         <ImageButton
-            android:layout_width="@dimen/lebar"
+            android:layout_width="0dp"
             android:layout_height="@dimen/tinggi"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5dp"
             android:background="@drawable/radius_content"
             android:src="@drawable/kalkulator"
             android:id="@+id/kalkulator"/>
 
         <ImageButton
-            android:layout_width="@dimen/lebar"
+            android:layout_width="0dp"
             android:layout_height="@dimen/tinggi"
+            android:layout_weight="1"
             android:background="@drawable/radius_content"
             android:src="@drawable/lingkaran"
             android:id="@+id/lingkaran"/>
     </LinearLayout>
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <ImageButton
-                android:layout_width="@dimen/lebar"
-                android:background="@drawable/radius_content"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/tinggi"
+                android:layout_weight="1"
+                android:background="@drawable/radius_content"
                 android:src="@drawable/bilangan"
                 android:id="@+id/bilangan"/>
 
             <ImageButton
-                android:layout_width="@dimen/lebar"
-                android:background="@drawable/radius_content"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/tinggi"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/radius_content"
                 android:src="@drawable/login"
                 android:id="@+id/login"/>
 
             <ImageButton
-                android:layout_width="@dimen/lebar"
-                android:background="@drawable/radius_content"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/tinggi"
+                android:layout_weight="1"
+                android:background="@drawable/radius_content"
                 android:src="@drawable/signup"
                 android:id="@+id/signup"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <ImageButton
-                android:layout_width="@dimen/lebar"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/tinggi"
+                android:layout_weight="1"
                 android:text="Calculator"
                 android:background="@drawable/radius_content"
                 android:src="@drawable/kalkulator"
                 android:id="@+id/calculator"/>
 
             <ImageButton
-                android:layout_width="@dimen/lebar"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/tinggi"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
                 android:background="@drawable/radius_content"
                 android:src="@drawable/bmi"
                 android:id="@+id/bmi"/>
 
             <ImageButton
-                android:layout_width="@dimen/lebar"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/tinggi"
+                android:layout_weight="1"
                 android:background="@drawable/radius_content"
                 android:src="@drawable/listview"
                 android:id="@+id/listview"/>
@@ -123,29 +132,33 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <ImageButton
-                android:layout_width="@dimen/lebar"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/tinggi"
+                android:layout_weight="1"
                 android:background="@drawable/radius_content"
                 android:src="@drawable/catatan"
                 android:id="@+id/catatan"/>
 
             <ImageButton
-                android:layout_width="@dimen/lebar"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/tinggi"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
                 android:background="@drawable/radius_content"
                 android:src="@drawable/file"
                 android:id="@+id/internalexternal"/>
 
             <ImageButton
-                android:layout_width="@dimen/lebar"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/tinggi"
+                android:layout_weight="1"
                 android:background="@drawable/radius_content"
                 android:src="@drawable/storage2"
                 android:id="@+id/storage"/>
@@ -153,29 +166,33 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <ImageButton
-                android:layout_width="@dimen/lebar"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/tinggi"
+                android:layout_weight="1"
                 android:background="@drawable/radius_content"
                 android:src="@drawable/list"
                 android:id="@+id/list"/>
 
             <ImageButton
-                android:layout_width="@dimen/lebar"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/tinggi"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
                 android:background="@drawable/radius_content"
                 android:src="@drawable/sqlite"
                 android:id="@+id/sqlite"/>
 
             <ImageButton
-                android:layout_width="@dimen/lebar"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/tinggi"
+                android:layout_weight="1"
                 android:background="@drawable/radius_content"
                 android:src="@drawable/mysql"
                 android:id="@+id/mysql"/>
@@ -183,29 +200,33 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <ImageButton
-                android:layout_width="@dimen/lebar"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/tinggi"
+                android:layout_weight="1"
                 android:background="@drawable/radius_content"
                 android:src="@drawable/gps"
                 android:id="@+id/gps"/>
 
             <ImageButton
-                android:layout_width="@dimen/lebar"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/tinggi"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="5dp"
                 android:background="@drawable/radius_content"
                 android:src="@drawable/selular"
                 android:id="@+id/seluler"/>
 
             <ImageButton
-                android:layout_width="@dimen/lebar"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/tinggi"
+                android:layout_weight="1"
                 android:background="@drawable/radius_content"
                 android:src="@drawable/sensor"
                 android:id="@+id/sensor"/>
