@@ -32,61 +32,65 @@ public class StorageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String setData = InputData.getText().toString();
-                //Digunakan untuk membuat dan menulis File/Data pada Penyimpanan
+                // Digunakan untuk membuat dan menulis File/Data pada Penyimpanan
                 FileOutputStream fileOutputStream;
                 try {
-                    //Membuat Berkas Baru dengan mode Private
-                    fileOutputStream = openFileOutput("DataSaya", Context.MODE_PRIVATE);
-
-                    //Menulis Data Baru dan Mengkonversinya kedalam bentuk byte
+                    // Mendapatkan path ke folder Documents
+                    File documentsFolder = null;
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+                        documentsFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
+                    }
+                    // Membuat direktori Documents jika belum ada
+                    if (!documentsFolder.exists()) {
+                        documentsFolder.mkdirs();
+                    }
+                    // Membuat berkas baru di folder Documents
+                    File file = new File(documentsFolder, "DataSaya.txt");
+                    // Membuat file output stream untuk menulis data ke berkas
+                    fileOutputStream = new FileOutputStream(file);
+                    // Menulis data baru dan mengkonversinya ke dalam bentuk byte
                     fileOutputStream.write(setData.getBytes());
-
-                    //Menutup FileOutputStream
+                    // Menutup FileOutputStream
                     fileOutputStream.close();
 
-                    Toast.makeText(getApplicationContext(), "Data Disimpan di Internal", Toast.LENGTH_SHORT).show();
-                }catch (Exception ex){
+                    Toast.makeText(getApplicationContext(), "Data Disimpan di Documents", Toast.LENGTH_SHORT).show();
+                } catch (Exception ex) {
                     ex.printStackTrace();
                 }
             }
         });
 
+
         External.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Digunakan Untuk Mengecek Apakah Tersebut Peyimpanan External atau Tidak
-                String state = Environment.getExternalStorageState();
-                if (Environment.MEDIA_MOUNTED.equals(state)){
-                    //Digunakan Untuk Mengecek Lokasi Penyimpanan Direktori di Memory External
-                    File dirExternal = Environment.getExternalStorageDirectory();
-
-                    //Membuat Direktori Baru dengan Nama "ContohDirektori"
-                    File createDir = new File(dirExternal.getAbsolutePath()+"/ContohDirektori");
-
-                    //Jika Direktori "ContohDirektori" Tidak Ada, Maka akan Membuatnya
-                    if (!createDir.exists()){
-                        createDir.mkdir();
-                        //Membuat File Baru didalam Direktori "ContohDirektori"
-                        File file = new File(createDir, "ContohFile.txt");
-
-                        String setData = InputData.getText().toString();
-                        //Digunakan untuk membuat dan menulis File/Data di Internal
-                        FileOutputStream fileOutputStream;
-                        try {
-                            //Membuat Berkas Baru dengan mode Private
-                            fileOutputStream = new FileOutputStream(file);
-
-                            fileOutputStream.write(setData.getBytes());
-
-                            fileOutputStream.close();
-
-                            Toast.makeText(getApplicationContext(), "Data Disimpan di External", Toast.LENGTH_SHORT).show();
-                        }catch (IOException ex){
-                            ex.printStackTrace();
+                String setData = InputData.getText().toString();
+                // Digunakan untuk membuat dan menulis File/Data pada Penyimpanan
+                FileOutputStream fileOutputStream;
+                try {
+                    // Memeriksa apakah penyimpanan eksternal tersedia untuk menulis
+                    if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
+                        // Mendapatkan path ke folder Documents di penyimpanan eksternal
+                        File externalDocumentsFolder = new File(Environment.getExternalStorageDirectory(), "Documents");
+                        // Membuat direktori Documents jika belum ada
+                        if (!externalDocumentsFolder.exists()) {
+                            externalDocumentsFolder.mkdirs();
                         }
+                        // Membuat berkas baru di folder Documents penyimpanan eksternal
+                        File file = new File(externalDocumentsFolder, "DataSaya.txt");
+                        // Membuat file output stream untuk menulis data ke berkas
+                        fileOutputStream = new FileOutputStream(file);
+                        // Menulis data baru dan mengkonversinya ke dalam bentuk byte
+                        fileOutputStream.write(setData.getBytes());
+                        // Menutup FileOutputStream
+                        fileOutputStream.close();
+
+                        Toast.makeText(getApplicationContext(), "Data Disimpan di Penyimpanan Eksternal", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Penyimpanan Eksternal Tidak Tersedia", Toast.LENGTH_SHORT).show();
                     }
-                }else {
-                    Toast.makeText(getApplicationContext(), "Penyimpanan External Tidak Tersedia", Toast.LENGTH_SHORT).show();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
                 }
             }
         });

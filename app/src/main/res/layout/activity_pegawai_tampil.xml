@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".PegawaiTampilActivity">
 
     <TextView
@@ -49,12 +50,17 @@
         android:id="@+id/editTextSalary" />
 
     <Button
+        android:background="@drawable/button_background_haikal4"
+        android:textColor="@color/putih"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Update Pegawai"
         android:id="@+id/buttonUpdate" />
 
     <Button
+        android:background="@drawable/button_background_haikal4"
+        android:textColor="@color/putih"
+        android:layout_marginTop="7dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hapus Pegawai"

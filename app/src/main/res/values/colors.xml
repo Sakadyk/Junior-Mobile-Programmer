@@ -3,9 +3,20 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-
+    <color name="natural">#fced7c</color>
     <color name="biru">#337dff</color>
     <color name="orange">#fca220</color>
     <color name="coklat">#c49b60</color>
     <color name="putih">#FFFFFF</color>
+
+    <color name="connected_background">#008000</color>
+    <color name="disconnected_background">#FF0000</color>
+
+    <color name="hitam">#292929</color>
+    <color name="abu">#d0d0d0</color>
+
+    <color name="darker_gray">#A9A9A9</color>
+    <color name="gray">#808080</color>
+    <color name="card_bg">#B8B8B8</color>
+    <color name="hijautoska">#49FFAF</color>
 </resources>

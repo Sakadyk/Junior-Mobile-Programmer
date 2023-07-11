@@ -1,46 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg3"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".InternalExternalActivity">
-
-    <Button
-        android:id="@+id/btnBuatFile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Buat File"/>
-
-    <Button
-        android:id="@+id/btnUbahFile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ubah File"/>
-
-    <Button
-        android:id="@+id/btnBacaFile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Baca File"/>
-
-    <Button
-        android:id="@+id/btnHapusFile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hapus File"/>
 
     <EditText
         android:id="@+id/textBaca"
         android:layout_width="match_parent"
-        android:layout_height="210dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_background"
+        android:gravity="start|top"
+        android:hint="Di sini tempat file-nya masbro"
         android:inputType="textMultiLine"
-        android:background="@android:color/darker_gray"
-        android:ems="10"
-        android:gravity="left|top"
-        android:padding="5dp"
-        android:layout_marginTop="10dp"
-        android:hint="Hasil Baca File"/>
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textBaca"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text=""
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/save" />
+        <Button
+            android:id="@+id/btnRead"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text=""
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/read" />
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text=""
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/delete" />
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text=""
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/clear" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

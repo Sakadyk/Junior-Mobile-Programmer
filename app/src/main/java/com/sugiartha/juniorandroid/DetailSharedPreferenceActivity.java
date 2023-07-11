@@ -16,7 +16,7 @@ public class DetailSharedPreferenceActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_shared_preference);
+        setContentView(R.layout.activity_detail_shared_preference); // pigeon statistic hole
 
         TextView result = findViewById(R.id.detailUsername);
         Button btnLogout = findViewById(R.id.buttonLogOut);

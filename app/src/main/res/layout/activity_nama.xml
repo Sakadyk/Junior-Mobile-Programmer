@@ -4,44 +4,246 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="20dp"
     android:orientation="vertical"
     tools:context=".NamaActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DATA PESERTA VSGA"
-        android:textSize="40dp"
-        android:layout_gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="50dp"
-        android:textSize="20dp"
-        android:text="Nama : "/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Masukkan Nama Anda"
-        android:id="@+id/editNama"/>
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/data_vsga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="DATA PESERTA VSGA"
+            android:textColor="@color/hitam"
+            android:textSize="28dp"
+            android:textStyle="bold" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OK"
-        android:id="@+id/btnOk"/>
+        <ImageView
+            android:layout_width="82dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/data_vsga"
+            android:src="@drawable/logo_dts" />
+    </RelativeLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <FrameLayout
+        android:outlineAmbientShadowColor="@color/hitam"
+        android:outlineSpotShadowColor="@color/hitam"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Data Peserta"
-        android:id="@+id/txtHasil"
-        android:paddingBottom="80dp"/>
+        android:backgroundTintMode="add"
+        android:layout_gravity="fill_vertical"
+        android:foregroundGravity="center">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="NAMA"
+                android:textColor="@color/hitam"
+                android:textSize="23dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:boxBackgroundMode="filled">
+
+                <EditText
+                    android:id="@+id/editNama"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTintMode="screen"
+                    android:hint="Masukkan Nama Anda"
+                    android:textColor="@color/hitam"
+                    android:textSize="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/editNama"-->
+            <!--                android:layout_width="379dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:backgroundTintMode="screen"-->
+            <!--                android:hint="Masukkan Nama Anda"-->
+            <!--                android:textColor="@color/putih"-->
+            <!--                android:textSize="15dp"-->
+            <!--                tools:layout_editor_absoluteX="6dp"-->
+            <!--                tools:layout_editor_absoluteY="128dp" />-->
+
+            <Button
+                android:id="@+id/btnOk"
+                android:background="@drawable/button_background_haikal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="OK" />
+
+            <TextView
+                android:id="@+id/txtHasil"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:paddingBottom="80dp"
+                android:textColor="@color/hitam"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <!--        <Button-->
+        <!--            android:id="@+id/btnOk"-->
+        <!--            style="@style/Widget.Material3.Button.TonalButton"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="OK" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/txtHasil"-->
+        <!--            android:layout_width="150dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginTop="30px"-->
+        <!--            android:paddingBottom="80dp"-->
+        <!--            android:text="Data Peserta"-->
+        <!--            android:textColor="@color/hitam"-->
+        <!--            android:textSize="20dp" />-->
+
+    </FrameLayout>
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+
+    <!--        android:background="@drawable/bg"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:layout_marginLeft="20px"-->
+    <!--        android:layout_marginRight="20px"-->
+    <!--        android:layout_marginTop="20px"-->
+    <!--        android:layout_marginBottom="20px">-->
+
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:textAlignment="center"-->
+    <!--            android:text="DATA PESERTA VSGA"-->
+    <!--            android:fontFamily="sans-serif-condensed-medium"-->
+    <!--            android:textColor="@color/putih"-->
+    <!--            android:textSize="28dp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:layout_marginTop="40px"/>-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+
+    <!--            android:layout_margin="20dp"-->
+    <!--            android:text="Nama : "-->
+    <!--            android:fontFamily="sans-serif-condensed-medium"-->
+    <!--            android:textColor="@color/putih"-->
+    <!--            android:textSize="25dp"-->
+    <!--            android:textStyle="bold" />-->
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_margin="20dp"-->
+    <!--            app:boxBackgroundMode="filled">-->
+
+
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/editNama"-->
+    <!--                android:layout_width="379dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginLeft="10dp"-->
+    <!--                android:backgroundTintMode="screen"-->
+    <!--                android:hint="Masukkan Nama Anda"-->
+    <!--                android:textColor="@color/putih"-->
+    <!--                android:textSize="15dp"-->
+    <!--                />-->
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+
+    <!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_marginLeft="10dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_marginBottom="20px"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:paddingTop="20dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:text="Nama : "&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:fontFamily="sans-serif-condensed-medium"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:textColor="@color/putih"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:textSize="25dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:textStyle="bold" />&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;        <EditText&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:id="@+id/editNama"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_width="379dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_marginLeft="10dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:backgroundTint="@color/hitam"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:backgroundTintMode="screen"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:hint="Masukkan Nama Anda"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:textColor="@color/putih"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:textSize="15dp" />&ndash;&gt;-->
+
+
+
+    <!--        <Button-->
+    <!--            android:id="@+id/btnOk"-->
+    <!--            style="@style/Widget.Material3.Button.TonalButton"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="OK" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/txtHasil"-->
+    <!--            android:layout_width="150dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="10dp"-->
+    <!--            android:layout_marginTop="30px"-->
+    <!--            android:paddingBottom="80dp"-->
+    <!--            android:text="Data Peserta"-->
+    <!--            android:textSize="20dp"-->
+    <!--            android:textColor="@color/putih"/>-->
+    <!--    </LinearLayout>-->
 
 </LinearLayout>

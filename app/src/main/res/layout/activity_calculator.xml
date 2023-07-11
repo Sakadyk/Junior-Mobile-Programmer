@@ -5,7 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CalculatorActivity">
+    tools:context=".CalculatorActivity"
+    android:background="@drawable/bg4"
+    tools:ignore="ExtraText">
 
     <Button
         android:text="+"
@@ -15,7 +17,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="18dp"
-        android:layout_width="80dp" />
+        android:layout_width="80dp"
+        android:textSize="24sp"
+        android:background="@drawable/button_background_imanuel"
+        android:textColor="#FFFFFF" />
 
     <EditText
         android:layout_width="match_parent"
@@ -23,7 +28,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/angka_pertama"
-        android:hint="Masukkan angka pertama"
+        android:hint="Insert First Number "
         android:textSize="14sp"
         android:layout_below="@+id/textView5"
         android:layout_alignParentLeft="true"
@@ -39,11 +44,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:id="@+id/angka_kedua"
-        android:hint="Masukkan angka kedua"
+        android:hint="Insert Second Number"
         android:textSize="14sp" />
 
     <TextView
-        android:text="MASUKKAN DUA ANGKA"
+        android:text="Insert Two Numbers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView5"
@@ -52,7 +57,10 @@
         android:textSize="24sp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:background="@drawable/gradient_background"
+        android:padding="16dp"
+        android:textColor="#000000" />
 
     <TextView
         android:text="0"
@@ -62,10 +70,11 @@
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:textSize="36sp"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="#000000"/>
 
     <TextView
-        android:text="HASIl"
+        android:text= "Result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1"
@@ -75,25 +84,46 @@
         android:layout_marginTop="35dp"
         android:layout_below="@+id/bersihkan"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:background="@drawable/gradient_background"
+        android:textColor="#000000"
+        android:padding="1dp"/>
 
     <Button
-        android:text="-"
-        android:layout_height="wrap_content"
         android:id="@+id/kurang"
-        android:layout_width="80dp"
+        android:layout_width="76dp"
+        android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/tambah"
         android:layout_alignBottom="@+id/tambah"
+        android:layout_toEndOf="@+id/tambah"
         android:layout_toRightOf="@+id/tambah"
-        android:layout_toEndOf="@+id/tambah" />
+        android:text="-"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:background="@drawable/gradient_background" />
 
     <Button
-        android:text="BERSIHKAN"
+        android:id="@+id/modulo"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/kurang"
+        android:layout_alignBottom="@+id/kurang"
+        android:layout_toEndOf="@+id/kurang"
+        android:layout_toRightOf="@+id/kurang"
+        android:text="%"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background_imanuel" />
+
+    <Button
+        android:text="Reset"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bersihkan"
         android:layout_below="@+id/tambah"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:background="@drawable/gradient_background" />
 
     <Button
         android:text="/"
@@ -102,7 +132,10 @@
         android:layout_width="80dp"
         android:layout_above="@+id/bersihkan"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textSize="24sp"
+        android:background="@drawable/button_background_imanuel"
+        android:textColor="#FFFFFF"/>
 
     <Button
         android:text="X"
@@ -112,6 +145,8 @@
         android:layout_alignBaseline="@+id/bagi"
         android:layout_alignBottom="@+id/bagi"
         android:layout_toLeftOf="@+id/bagi"
-        android:layout_toStartOf="@+id/bagi" />
+        android:layout_toStartOf="@+id/bagi"
+        android:textSize="15sp"
+        android:background="@drawable/gradient_background" />
 
 </RelativeLayout>
