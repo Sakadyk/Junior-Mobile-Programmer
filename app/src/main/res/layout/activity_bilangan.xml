@@ -25,6 +25,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:text="Masukkan Angka"
         android:textColor="#000000"
         android:textStyle="normal|bold"/>
@@ -32,12 +33,14 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:hint="Masukkan Sembarang Angka"
         android:id="@+id/angka"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:text="Proses"
         android:id="@+id/proses"
         android:textColor="#000000"
@@ -46,6 +49,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:text="Bilangan"
         android:id="@+id/bilangan"/>
 

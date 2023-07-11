@@ -50,17 +50,23 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Check Connection"
-        android:textSize="20px"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        tools:layout_editor_absoluteX="16dp" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
         android:indeterminate="true"
-        android:progressDrawable="@drawable/custom_progressbar" />
+        android:progressDrawable="@drawable/custom_progressbar"
+        android:visibility="invisible"
+        android:layout_marginTop="260dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

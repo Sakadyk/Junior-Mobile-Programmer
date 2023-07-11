@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/bglogin"
     android:gravity="center"
+    android:padding="40dp"
     tools:context=".LoginActivity">
 
     <ImageView
@@ -17,7 +18,7 @@
 
     <LinearLayout
         android:layout_marginTop="40dp"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="290dp"
         android:orientation="vertical"
         android:background="@drawable/radius">

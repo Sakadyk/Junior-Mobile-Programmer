@@ -26,7 +26,7 @@
     <Button
         android:background="@drawable/button_background_haikal2"
         android:id="@+id/getLocation"
-        android:text="Dapatkan Lokasi"
+        android:text=" Dapatkan Lokasi "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

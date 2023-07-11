@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="650dp"
+    android:layout_height="match_parent"
     android:background="@drawable/background"
+    android:padding="20dp"
     android:orientation="vertical"
     tools:context=".NamaActivity">
 
@@ -49,9 +50,6 @@
         android:outlineSpotShadowColor="@color/hitam"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginBottom="40dp"
-        android:layout_marginRight="40dp"
         android:backgroundTintMode="add"
         android:layout_gravity="fill_vertical"
         android:foregroundGravity="center">

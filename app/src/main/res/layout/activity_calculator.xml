@@ -7,10 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".CalculatorActivity"
     android:background="@drawable/bg4"
-    tools:ignore="ExtraText"
-
-    >
-
+    tools:ignore="ExtraText">
 
     <Button
         android:text="+"
@@ -23,8 +20,7 @@
         android:layout_width="80dp"
         android:textSize="24sp"
         android:background="@drawable/button_background_imanuel"
-        android:textColor="#FFFFFF"
-        />
+        android:textColor="#FFFFFF" />
 
     <EditText
         android:layout_width="match_parent"
@@ -37,8 +33,7 @@
         android:layout_below="@+id/textView5"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="22dp"
-      />
+        android:layout_marginTop="22dp" />
 
     <EditText
         android:layout_width="match_parent"
@@ -50,8 +45,7 @@
         android:layout_alignParentStart="true"
         android:id="@+id/angka_kedua"
         android:hint="Insert Second Number"
-        android:textSize="14sp"
-        />
+        android:textSize="14sp" />
 
     <TextView
         android:text="Insert Two Numbers"
@@ -66,11 +60,7 @@
         android:layout_alignParentStart="true"
         android:background="@drawable/gradient_background"
         android:padding="16dp"
-        android:textColor="#000000"
-        />
-
-
-
+        android:textColor="#000000" />
 
     <TextView
         android:text="0"
@@ -110,8 +100,8 @@
         android:text="-"
         android:textSize="24sp"
         android:textColor="#000000"
-        android:background="@drawable/gradient_background"
-        />
+        android:background="@drawable/gradient_background" />
+
     <Button
         android:id="@+id/modulo"
         android:layout_width="95dp"
@@ -123,8 +113,7 @@
         android:text="%"
         android:textSize="24sp"
         android:textColor="#FFFFFF"
-        android:background="@drawable/button_background_imanuel"
-        />
+        android:background="@drawable/button_background_imanuel" />
 
     <Button
         android:text="Reset"
@@ -134,8 +123,7 @@
         android:layout_below="@+id/tambah"
         android:layout_centerHorizontal="true"
         android:textColor="#000000"
-        android:background="@drawable/gradient_background"
-        />
+        android:background="@drawable/gradient_background" />
 
     <Button
         android:text="/"
@@ -159,8 +147,6 @@
         android:layout_toLeftOf="@+id/bagi"
         android:layout_toStartOf="@+id/bagi"
         android:textSize="15sp"
-        android:background="@drawable/gradient_background"
-
-        />
+        android:background="@drawable/gradient_background" />
 
 </RelativeLayout>

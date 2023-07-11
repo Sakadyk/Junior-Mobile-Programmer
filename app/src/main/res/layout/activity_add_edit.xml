@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="10dp"
     android:background="#FCFFD1"
     tools:context=".AddEditActivity">
 
@@ -55,6 +56,7 @@
             android:layout_weight="0.5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
             android:background="@drawable/rounded_corner"
             android:text="Submit"/>
 
